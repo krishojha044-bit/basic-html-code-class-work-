@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        #main p{
+            color: blueviolet;
+        }
+        #main > p {
+            background-color: blue;
+        }
+        #main ~p{
+            background-color: brown;
+        }
+        a:link{
+            text-decoration:none; font-size: 20px;
+        }
+        a:hover{
+            color: cadetblue; font-size:25px;
+        }
+        a:active{
+            color: chocolate;
+        }
+        #main p{
+            color: aquamarine;
+        }
+        #main p:nth-child(even){
+            color: blue;
+        }
+        #main p::first-letter{
+            color: rgb(163, 94, 38);
+        }
+        #main p::first-line{
+            color: chartreuse;
+        }
+        #main p::after{
+            content: "read more";
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!--css combinators-->
+    <div id="main"><!-- div first-->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium harum. Suscipit vel voluptates necessitatibus eveniet quis reprehenderit voluptatem ratione iste ipsum, incidunt, quibusdam ea error eius deleniti! A, inventore.
+        </p>
+        <div id="inside"><!--inside first-->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet est doloribus reiciendis iusto et fugit nisi suscipit modi sit vero? Quas consectetur doloremque natus quos iure pariatur magni hic corrupti?
+            </p>
+        </div>
+    </div>
+     <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla velit aut quis aliquam suscipit perspiciatis doloremque odit necessitatibus enim dolorem assumenda, id veritatis tempore similique et? Culpa quibusdam pariatur sapiente?
+     </p>
+       <div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati temporibus doloribus sunt dolorum nesciunt magni iusto, odit dolore dignissimos. Accusantium voluptatibus doloribus optio distinctio dolorum quod est repellat minima reiciendis?
+        </p>
+       </div>
+     <a href="www.google.com"> google</a>
+</body>
+</html>
