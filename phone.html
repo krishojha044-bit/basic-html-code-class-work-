@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPI Pay (Demo)</title>
+  <link rel="stylesheet" href="phonepe.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <div class="user">
+        <div class="avatar">O</div>
+        <div>
+          <p class="hello">Hello, krish</p>
+          <p class="sub">UPI Wallet Demo</p>
+        </div>
+      </div>
+      <button class="icon-btn" title="Notifications">🔔</button>
+    </header>
+
+    <section class="balance-card">
+      <p class="label">Wallet Balance</p>
+      <h1 class="balance" id="balance">₹ 5,250</h1>
+      <p class="mini">UPI ID: krish@upi</p>
+    </section>
+
+    <section class="quick-actions">
+      <button class="action" onclick="openPay()">
+        <span>📤</span>
+        <p>Pay</p>
+      </button>
+
+      <button class="action" onclick="openReceive()">
+        <span>📥</span>
+        <p>Receive</p>
+      </button>
+
+      <button class="action" onclick="openHistory()">
+        <span>🧾</span>
+        <p>History</p>
+      </button>
+
+      <button class="action" onclick="openScan()">
+        <span>📷</span>
+        <p>Scan</p>
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>Send Money</h2>
+
+      <label>Receiver UPI ID</label>
+      <input type="text" id="upi" placeholder="example@upi" />
+
+      <label>Amount (₹)</label>
+      <input type="number" id="amount" placeholder="Enter amount" />
+
+      <button class="pay-btn" onclick="payNow()">Pay Now</button>
+
+      <p class="msg" id="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Transactions</h2>
+      <div id="history" class="history"></div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
